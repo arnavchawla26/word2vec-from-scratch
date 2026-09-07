@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "word2vec-from-scratch"
+version = "0.1.0"
+description = "Skip-gram and CBOW word2vec with negative sampling, implemented from scratch in NumPy."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pyflakes>=3.1",
+]
+
+[project.scripts]
+w2v = "word2vec.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
