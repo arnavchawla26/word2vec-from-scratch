@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+build/
+dist/
+
+# Trained model artifacts (generate your own with `w2v train --out model`)
+*.npz
+/model.json
